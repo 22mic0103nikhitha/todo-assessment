@@ -1,0 +1,60 @@
+<template name="App">
+
+  <div class="container">
+
+    <h1>✨ Smart Todo Manager</h1>
+
+    <form class="task-form">
+
+      <input
+        type="text"
+        name="text"
+        placeholder="Enter a task..."
+        required
+      >
+
+      <select name="category">
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+        <option value="Urgent">Urgent</option>
+      </select>
+
+      <button type="submit">
+        Add
+      </button>
+
+    </form>
+
+    <ul id="taskList">
+
+      {{#each tasks}}
+
+        <li>
+
+          <input
+            type="checkbox"
+            class="toggle"
+            checked="{{isChecked}}"
+          >
+
+          <span class="{{checkedClass}}">
+            {{text}}
+          </span>
+
+          <span class="category {{categoryClass}}">
+            {{category}}
+          </span>
+
+          <button class="delete">
+            Delete
+          </button>
+
+        </li>
+
+      {{/each}}
+
+    </ul>
+
+  </div>
+
+</template>

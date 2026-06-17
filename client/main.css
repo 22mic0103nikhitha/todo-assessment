@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+
+.task-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.task-form input,
+.task-form select {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+}
+
+.task-form input {
+  flex: 1;
+}
+
+.task-form button {
+  background: #00c896;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.task-form button:hover {
+  transform: translateY(-2px);
+}
+
+#taskList {
+  padding: 0;
+}
+
+#taskList li {
+  list-style: none;
+  background: white;
+  margin-bottom: 12px;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.3s;
+  cursor: grab;
+}
+
+#taskList li:hover {
+  transform: scale(1.02);
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.category {
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.work {
+  background: #3498db;
+}
+
+.personal {
+  background: #27ae60;
+}
+
+.urgent {
+  background: #e74c3c;
+}
+
+.delete {
+  margin-left: auto;
+  background: #ff4757;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.delete:hover {
+  background: #ff3742;
+}
